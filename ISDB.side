@@ -1,0 +1,573 @@
+{
+  "id": "c8beb27b-f50c-4520-9872-6cfde86ef300",
+  "version": "2.0",
+  "name": "ISDB",
+  "url": "https://international-song-database.herokuapp.com/",
+  "tests": [{
+    "id": "cb995ec8-54c3-4168-910f-89fc7359e38a",
+    "name": "005 Log Out",
+    "commands": [{
+      "id": "d79f879f-56b9-47d3-8190-b9a6486bf0bf",
+      "comment": "",
+      "command": "open",
+      "target": "https://international-song-database.herokuapp.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f6d13ada-d00f-453f-b9cd-d8df7a07e237",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x718",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e3607a7d-6e37-4b08-ae69-b015d2659501",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Log Out",
+      "targets": [
+        ["linkText=Log Out", "linkText"],
+        ["css=.ml-auto .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Log Out')]", "xpath:link"],
+        ["xpath=//div[@id='navbar']/ul[2]/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/logout')]", "xpath:href"],
+        ["xpath=//ul[2]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Log Out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "72f0bdac-aa6d-40d4-b0c7-ffd142178df8",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[contains(.,'Goodbye ${y}')]",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "d7cfbb1a-a328-44af-ace1-2d49a3f1e87a",
+    "name": "003 New Song",
+    "commands": [{
+      "id": "3f885e69-e4b4-4ebc-9638-4d2d18a1607b",
+      "comment": "",
+      "command": "open",
+      "target": "https://international-song-database.herokuapp.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "115a71d3-8c37-49b1-a517-593884b148eb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x754",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4ae52ae4-b38c-4ee4-bc40-0d141ef02894",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Songs",
+      "targets": [
+        ["linkText=Songs", "linkText"],
+        ["css=.nav-item:nth-child(4) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Songs')]", "xpath:link"],
+        ["xpath=//div[@id='navbar']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/songs')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Songs')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ac600a8-7411-4e60-b16e-3c079a1f21d8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Create a new Song",
+      "targets": [
+        ["linkText=Create a new Song", "linkText"],
+        ["css=.col-12 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Create a new Song')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/songs/new')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Create a new Song')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e0c3a116-b49d-47ea-829f-8f3332bba421",
+      "comment": "",
+      "command": "store",
+      "target": "Kangaroo Court",
+      "targets": [],
+      "value": "a"
+    }, {
+      "id": "e86828cd-94a9-4994-bb2c-62d53855c537",
+      "comment": "",
+      "command": "click",
+      "target": "name=artist",
+      "targets": [
+        ["name=artist", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='artist']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e4aa0d3-f453-40cc-a0e6-54f62cd1a1c7",
+      "comment": "",
+      "command": "type",
+      "target": "name=artist",
+      "targets": [
+        ["name=artist", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='artist']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Sopa"
+    }, {
+      "id": "8c774dcc-234e-40a6-95fa-402508aca336",
+      "comment": "",
+      "command": "type",
+      "target": "name=country",
+      "targets": [
+        ["name=country", "name"],
+        ["css=.form-group:nth-child(2) > input", "css:finder"],
+        ["xpath=//input[@name='country']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "United States"
+    }, {
+      "id": "8e797900-eb09-4544-ae4f-eba6dc06fc71",
+      "comment": "",
+      "command": "type",
+      "target": "name=title",
+      "targets": [
+        ["name=title", "name"],
+        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='title']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "${a}"
+    }, {
+      "id": "3653440a-9949-4f08-ad2f-28f0c46e7be1",
+      "comment": "",
+      "command": "type",
+      "target": "name=duration",
+      "targets": [
+        ["name=duration", "name"],
+        ["css=.form-group:nth-child(4) > .form-control", "css:finder"],
+        ["xpath=//input[@name='duration']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "340"
+    }, {
+      "id": "d7a4246d-bff4-485b-85e5-1342c3f9aae1",
+      "comment": "",
+      "command": "click",
+      "target": "id=message",
+      "targets": [
+        ["id=message", "id"],
+        ["name=lyrics", "name"],
+        ["css=#message", "css:finder"],
+        ["xpath=//textarea[@id='message']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ff7bb9d-2041-4449-b285-aaf1711e5ceb",
+      "comment": "",
+      "command": "type",
+      "target": "id=message",
+      "targets": [
+        ["id=message", "id"],
+        ["name=lyrics", "name"],
+        ["css=#message", "css:finder"],
+        ["xpath=//textarea[@id='message']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Catsup"
+    }, {
+      "id": "38f4faa2-da22-4262-8fd7-e57e7138db8f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create Song')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e13d1542-68f1-4fab-8977-0d4a3ac9fdff",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//div[contains(.,'Your song has no artist name')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c5efd7ac-6a2f-45c2-9bbd-8fb6fd3e9cb5",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//div[contains(.,'Your song has no country for artist')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "538dcf23-ecaf-40df-a044-67d3cdf62ba2",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//div[contains(.,'Your song needs a title')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "159932f3-6e8f-4099-9acd-48eaeb152c1e",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//div[contains(.,'Song ${a} ')]",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "05219e48-760a-42d9-b6aa-96f69e314e70",
+    "name": "004 Delete Song",
+    "commands": [{
+      "id": "30bd0caa-2c8d-47dd-9f58-768766cc9d70",
+      "comment": "",
+      "command": "open",
+      "target": "https://international-song-database.herokuapp.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "24de9f12-d00f-49cb-8173-a9b26bd9163a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1050x718",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0a335087-df8f-46f0-944f-b5c1e7bf87c8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.p-5",
+      "targets": [
+        ["css=.p-5", "css:finder"],
+        ["xpath=//main", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6995f0ef-fc08-4d1c-8a74-831587388d6a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Songs",
+      "targets": [
+        ["linkText=Songs", "linkText"],
+        ["css=.nav-item:nth-child(4) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Songs')]", "xpath:link"],
+        ["xpath=//div[@id='navbar']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/songs')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Songs')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0e11be5-efd2-4730-8587-ddad83faf2eb",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Abusey Junction",
+      "targets": [
+        ["linkText=Abusey Junction", "linkText"],
+        ["css=li:nth-child(1) > .card a", "css:finder"],
+        ["xpath=//a[contains(text(),'Abusey Junction')]", "xpath:link"],
+        ["xpath=//div[@id='song_list']/div/div/ul/li/div/p/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/songs/1')]", "xpath:href"],
+        ["xpath=//p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Abusey Junction')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6bb5dfbe-1448-4f5e-8e10-d73c0c24a28e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Delete this song",
+      "targets": [
+        ["linkText=Delete this song", "linkText"],
+        ["css=a:nth-child(12)", "css:finder"],
+        ["xpath=//a[contains(text(),'Delete this song')]", "xpath:link"],
+        ["xpath=//div[@id='song_card']/div/div/div/div/a[4]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/songs/1/delete')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Delete this song')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a1a5e5a-973b-4375-b632-8004d487ebac",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//img[@alt='404']",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "25869eba-8719-479f-9ac0-7f3d1467ced1",
+    "name": "01 Register",
+    "commands": [{
+      "id": "d70b8ae6-80d9-43c6-99f3-c1299b46c701",
+      "comment": "",
+      "command": "open",
+      "target": "https://international-song-database.herokuapp.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3325f6c7-6b02-4699-b206-860a480dcf9c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x754",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9d2117b5-38be-4cea-bea9-e93a9cdb94e0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Register",
+      "targets": [
+        ["linkText=Register", "linkText"],
+        ["css=.ml-auto > .nav-item:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Register')]", "xpath:link"],
+        ["xpath=//div[@id='navbar']/ul[2]/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/register')]", "xpath:href"],
+        ["xpath=//ul[2]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Register')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "09edac71-584d-44cf-ada0-15283d364bd6",
+      "comment": "",
+      "command": "store",
+      "target": "006",
+      "targets": [],
+      "value": "x"
+    }, {
+      "id": "70d2bbdd-f547-4a61-be00-be2a55395bbd",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e756a5e-e264-4240-a354-302e9bffa98a",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "User${x}"
+    }, {
+      "id": "cf0c4ac1-8a5a-403c-8341-eea1762f2379",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "123456"
+    }, {
+      "id": "5ea55621-cbeb-40bd-acc0-c9013179c4cc",
+      "comment": "",
+      "command": "type",
+      "target": "name=repeat_password",
+      "targets": [
+        ["name=repeat_password", "name"],
+        ["css=.form-group:nth-child(3) > .form-control", "css:finder"],
+        ["xpath=//input[@name='repeat_password']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "123456"
+    }, {
+      "id": "af8bb4ca-b911-4ad3-83a0-fd124ccd839d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Register')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fdcb9bd0-a451-4380-85b1-68b809993333",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//div[contains(.,'Error - You must enter a username')]",
+      "targets": [
+        ["css=.alert", "css:finder"],
+        ["xpath=//header/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "035af74f-84e0-447e-8d76-6f0db16923d8",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//div[contains(.,'Error - You must enter a password that matches')]",
+      "targets": [
+        ["css=.alert", "css:finder"],
+        ["xpath=//header/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "14f4bcd9-ec5b-47c4-943f-42bff2c0be9a",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//div[contains(.,'Passwords do not match')]",
+      "targets": [
+        ["css=.alert", "css:finder"],
+        ["xpath=//header/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e2d166ad-6f53-4a98-8241-1cb519615f0f",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//div[contains(.,\"User 'User${x}' is already taken\")]",
+      "targets": [
+        ["css=.alert", "css:finder"],
+        ["xpath=//header/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "23c1ce34-dd3f-4620-ab87-0ea808946677",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[contains(.,'User${x} was succesfully registered.')]",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "8427ca29-9d6b-438e-9bde-08f92b294d10",
+    "name": "002 Login",
+    "commands": [{
+      "id": "a3d3255e-03da-44f6-9e6c-fea8b231d4e0",
+      "comment": "",
+      "command": "open",
+      "target": "https://international-song-database.herokuapp.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "94f6d945-ab85-40f7-8133-3460c1caaccc",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x738",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b8c66b8d-41fa-45cd-95e0-c5b9c2a031a8",
+      "comment": "",
+      "command": "store",
+      "target": "User${x}",
+      "targets": [],
+      "value": "y"
+    }, {
+      "id": "4fa5efec-65ee-4447-8b62-5d0173ea8871",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Log In",
+      "targets": [
+        ["linkText=Log In", "linkText"],
+        ["css=.ml-auto > .nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Log In')]", "xpath:link"],
+        ["xpath=//div[@id='navbar']/ul[2]/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//ul[2]/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Log In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6cf96b8d-e096-4fe6-a42e-09be302d5e45",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "535f70aa-b1b9-4d20-8118-7b5f5b22e917",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.form-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${y}"
+    }, {
+      "id": "d204d6e7-9d1a-4b7e-9794-7f1e8abf1df0",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.form-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "123456"
+    }, {
+      "id": "d3533ce5-eeb7-4aad-9390-5993efdfa698",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Log In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "11e7da5a-ae9a-407a-a746-159bc46df027",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//div[contains(.,'Error - You must provide a username')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5e7dc310-2ddc-4721-ae2c-e1a9c3394b4c",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "xpath=//div[contains(.,'Error - invalid username and/or password')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ce8e1e94-3bcb-4b60-83fb-c2fbafdf053a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[contains(.,'Welcome ${y}')]",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "eb37a460-90db-4c61-b993-3fd55812b033",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["cb995ec8-54c3-4168-910f-89fc7359e38a"]
+  }],
+  "urls": ["https://international-song-database.herokuapp.com/"],
+  "plugins": []
+}

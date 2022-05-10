@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+main {
+    max-width: 800px;
+    width: 90%;
+    margin: auto;
+    padding: 40px;
+}
+
+label,
+input,
+textarea,
+select {
+    margin: 10px;
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#enviar {
+    grid-column: span 2;
+    height: 45px;
+    line-height: 45px;
+    width: 30%;
+    background-color: gray;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#enviar:hover {
+    box-shadow: 4px 0px 40px rgba(162, 162, 162, 1);
+}
+
+@media screen and (max-width: 800px) {
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+    #enviar {
+        grid-column: 1;
+        width: 100%;
+    }
+    .input {
+        grid-column: 1;
+    }
+}

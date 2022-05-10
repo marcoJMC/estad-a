@@ -1,0 +1,60 @@
+header {
+    background-color: gray;
+    margin: auto;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+img {
+    width: auto;
+    height: 180px;
+}
+
+.title {
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr {
+    border: gray 1px solid;
+}
+
+.lf {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+td {
+    padding: 0 40px;
+}
+
+.scho,
+.exp {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    table {
+        width: 100%;
+    }
+    table tr {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid gray;
+    }
+    header {
+        display: block;
+    }
+}
